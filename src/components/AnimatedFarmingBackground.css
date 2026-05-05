@@ -1,0 +1,39 @@
+.video-background-container {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #000; /* Fallback */
+}
+
+.auth-video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Color Adjustments: Enhancing realism and depth */
+  filter: brightness(0.85) contrast(1.1) saturate(1.1);
+  transform: scale(1.05); /* Slight scale to hide edges if needed */
+}
+
+/* Professional Overlay - Adjusts colors to be soothing and ensures UI pops */
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 40, 0, 0.1) 0%,
+    rgba(0, 15, 0, 0.4) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Subtle atmospheric blur at the edges */
+.video-background-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 150px rgba(0,0,0,0.3);
+  z-index: 2;
+  pointer-events: none;
+}

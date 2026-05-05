@@ -1,0 +1,119 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+.logo-icon {
+  color: var(--primary);
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  border: 1px solid #eee;
+}
+
+.lang-switcher select {
+  background: none;
+  border: none;
+  color: var(--primary-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.lang-switcher svg {
+  color: var(--primary);
+}
+
+.nav-links a {
+  font-weight: 500;
+  color: var(--text-main);
+  transition: var(--transition);
+}
+.nav-links a:hover {
+  color: var(--primary);
+}
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-dark) !important;
+}
+.logout-btn {
+  background: none;
+  color: #e74c3c;
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+}
+.logout-btn:hover {
+  transform: scale(1.1);
+}
+.login-link {
+  background: var(--primary);
+  color: white !important;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  transition: var(--transition);
+}
+.login-link:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  .user-info span {
+    display: none; /* Hide name on small screens, just show icon */
+  }
+  .nav-user {
+    padding: 0.5rem;
+  }
+}

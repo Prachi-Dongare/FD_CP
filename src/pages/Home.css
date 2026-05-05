@@ -1,0 +1,354 @@
+.home-container {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Hero Section with Parallax Background */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-gradient);
+}
+
+.hero-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%; /* Extra height for parallax */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  filter: saturate(1.2) brightness(1.1);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 60%, var(--bg-gradient));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 5%;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 8vw, 5rem);
+  color: var(--primary-dark);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.hero-content p {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Bento Grid Features */
+.features-section {
+  padding: 100px 5%;
+  position: relative;
+  z-index: 2;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section-header h2 {
+  font-size: 3rem;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Force one line */
+  gap: 1.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 25px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition);
+  cursor: pointer;
+  height: 100%; /* Fill grid height */
+  min-height: 380px;
+}
+
+.feature-card .item-content p {
+  font-size: 0.85rem; /* Slightly smaller for 5-column layout */
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(46, 139, 87, 0.1);
+}
+
+.item-icon {
+  background: #f1f8e9;
+  color: var(--primary);
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+/* How it Works - More Complex */
+.how-it-works {
+  padding: 120px 5%;
+  background: #fafafa;
+  position: relative;
+}
+
+.steps-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 3rem;
+  position: relative;
+}
+
+.connecting-line {
+  position: absolute;
+  top: 35px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: repeating-linear-gradient(to right, var(--primary-light), var(--primary-light) 10px, transparent 10px, transparent 20px);
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.step-box {
+  flex: 1;
+  text-align: center;
+  z-index: 1;
+  background: white;
+  padding: 2rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+}
+
+/* Redesigned CTA - 4th Image Style */
+.cta-section-new {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 5%;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.cta-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cta-background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(46, 139, 87, 0.9), rgba(27, 94, 32, 0.9));
+}
+
+.cta-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+}
+
+.cta-container h2 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.cta-container p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 3rem;
+}
+
+.btn-cta {
+  background: var(--accent);
+  color: white;
+  padding: 1.2rem 3.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: var(--transition);
+}
+
+.policies-preview-section {
+  padding: 120px 5%;
+}
+
+.policies-preview-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.policy-preview-card {
+  flex: 1;
+  background: var(--primary);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(46, 139, 87, 0.15);
+  cursor: pointer;
+  transition: var(--transition);
+  min-height: 350px; /* Uniform height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.policy-preview-card:hover {
+  background: var(--primary-dark);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 70px rgba(46, 139, 87, 0.3);
+}
+
+.policy-preview-card h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.policy-preview-card p {
+  opacity: 0.9;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .policies-preview-grid { flex-direction: column; align-items: center; }
+  .policy-preview-card { width: 100%; max-width: 500px; }
+}
+
+.btn-cta:hover {
+  background: #e76f51;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.step-box {
+  flex: 1;
+  text-align: center;
+  z-index: 1;
+}
+
+.step-circle {
+  width: 70px;
+  height: 70px;
+  background: var(--white);
+  border: 2px solid var(--primary-light);
+  color: var(--primary-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.step-box h3 { margin-bottom: 1rem; }
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 1.2rem 3rem;
+  border-radius: 50px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  box-shadow: 0 15px 30px rgba(46, 139, 87, 0.3);
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(46, 139, 87, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .bento-item { grid-column: span 1 !important; grid-row: span 1 !important; min-height: 250px; }
+}
+
+@media (max-width: 768px) {
+  .steps-wrapper { flex-direction: column; align-items: center; }
+  .bento-grid { grid-template-columns: 1fr; }
+}
